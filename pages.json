@@ -5,8 +5,8 @@
 		}
 	],
 	"globalStyle": {
-		"navigationBarTitleText": "白沙物源",
-		"backgroundColor": "#F8F8F8",
+		"navigationBarTitleText": "NOVUS",
+		"backgroundColor": "#000000",
 		"navigationStyle": "custom"
 	},
 	"uniIdRouter": {}

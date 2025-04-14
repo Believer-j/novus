@@ -34,4 +34,12 @@
 	/*每个页面公共css */
 	@import '@/uni_modules/uv-ui-tools/index.scss';
 	@import "style/base.scss";
+	
+	   /* 假设字体文件名为 MyFont.woff，并放在 static/fonts 文件夹下 */
+	   @font-face {
+	     font-family: 'YouSheBiaoTiHei'; /* 你可以给字体起一个别名 */
+	     src: url('./static/youshebiaotihei.ttf') format('truetype');
+	     font-weight: normal;
+	     font-style: normal;
+	   }
 </style>
