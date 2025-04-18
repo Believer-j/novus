@@ -9,6 +9,15 @@ export default {
 			curTheme: 'curTheme',
 			userInfo: 'userInfo'
 		}),
+		shortAddress() {
+			if (this.$store.state.address) {
+				let address = this.$store.state.address
+				const end = address.substring(address.length - 6, address.length);
+				return '0x...' + end
+			} else {
+				return this.$t('connectWallet')
+			}
+		},
 		statusBarHeight() {
 			const sys = uni.$uv.sys()
 			return sys.statusBarHeight

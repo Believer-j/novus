@@ -2,7 +2,8 @@
   "dependencies": {
     "@wagmi/connectors": "^5.7.7",
     "@wagmi/core": "^2.16.4",
+    "party-js": "^2.2.0",
     "viem": "^2.23.3",
-	"vue-i18n": "^9.13.1"
+    "vue-i18n": "^9.13.1"
   }
 }

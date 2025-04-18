@@ -18,7 +18,8 @@ import {
 
 import {
 	sepolia,
-	blast
+	blast,
+	bsc
 } from '@wagmi/core/chains'
 
 import {
@@ -32,11 +33,11 @@ import {
 
 
 export const config = createConfig({
-	chains: [sepolia],
+	chains: [bsc],
 	// chains: [blast],
 	connectors: [injected()],
 	transports: {
-		[sepolia.id]: http(),
+		[bsc.id]: http(),
 		// [blast.id]: http()
 	},
 })

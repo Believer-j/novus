@@ -7,10 +7,15 @@ import store from './store/index.js'
 import cookie from './utils/cookie.js'
 import web3 from './web3'
 uni.$web3 = web3;
+// 国际化
+import i18n from './locale/index.js'
 import { createSSRApp } from 'vue'
+
+
 export function createApp() {
   const app = createSSRApp(App)
   app.use(uvUI);
+  app.use(i18n)
   app.config.globalProperties.$utils = utils
   app.config.globalProperties.$store = store
   app.config.globalProperties.$cookie = cookie

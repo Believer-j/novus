@@ -23,6 +23,7 @@ import {
 import {
 	DefaultLocaleLang,
 	DefaultTheme,
+	LocaleKey,
 	PrefixTheme
 } from "@/config/index.js"
 
@@ -58,7 +59,7 @@ const store = new Vuex.Store({
 		setLocale(state, data) {
 			const locale = getLocale();
 			state.locale = data || locale || DefaultLocaleLang
-			setLocale(state.locale)
+			uni.setStorageSync(LocaleKey, state.locale)
 		},
 		// 设置邀请码
 		setInvitationCode(state, code) {
@@ -154,13 +155,17 @@ const store = new Vuex.Store({
 				// 签名
 				const signMessage = await uni.$web3.signMessage(start + end);
 				console.log(signMessage)
+				// let params = {
+				// 	address,
+				// 	sign: start + end,
+				// 	content: signMessage,
+				// 	invitationCode, // 绑定邀请码时传入
+				// };
 				let params = {
-					udid: "11",
-					address,
+					address: address,
 					sign: start + end,
 					content: signMessage,
-					invitationCode, // 绑定邀请码时传入
-					isPc: 1
+					invitationCode // 绑定邀请码时传入
 				};
 				uni.showLoading()
 				try {
