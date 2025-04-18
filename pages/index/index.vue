@@ -210,7 +210,7 @@
 			<image src="/static/header-logo.png" style="width: 165px; height: 58px; margin-left: -20px;"></image>
 		</view>
 		<uv-popup ref="transfer" mode="center" round="9px" :safeAreaInsetBottom="false">
-			<view class="flex-column" style="width: 319px; height: 222px; color: #000000;">
+			<view id="transferPop" class="flex-column" style="width: 319px; height: 222px; color: #000000;">
 				<view class="font-15" style="margin-top: 27px; text-align: center; font-family: YouSheBiaoTiHei;">
 					{{ $t('Transfer') }}
 				</view>
@@ -305,6 +305,8 @@
 				})
 			},
 			transfer() {
+				var canvas = document.getElementById('transferPop');
+				this.$refs.partyFire.triggerEffect(canvas)
 				this.$refs.transfer.close()
 			},
 			showTransfer() {

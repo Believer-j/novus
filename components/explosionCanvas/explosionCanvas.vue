@@ -1,6 +1,6 @@
 <!-- components/particle-effect.vue -->
 <template>
-	<view>
+	<view >
 	</view>
 </template>
 
@@ -24,9 +24,10 @@
 				this.windowWidth = systemInfo.windowWidth
 				this.windowHeight = systemInfo.windowHeight
 			},
-			triggerEffect() {
-				let rect = new Rect(this.windowWidth * 0.5, this.windowHeight * 0.5)
-				party.confetti(rect);
+			triggerEffect(v) {
+				
+				// let rect = new Rect(this.windowWidth * 0.5, this.windowHeight * 0.5)
+				party.confetti(v);
 			},
 			triggerSparkles() {
 				let rect = new Rect(this.windowWidth * 0.5, this.windowHeight * 0.5)
